@@ -1,2 +1,2 @@
-public class RoomTest {
+public abstract class RoomTest {
 }

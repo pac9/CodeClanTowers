@@ -14,7 +14,7 @@ public class BedroomTest {
 
       @Before
       public void before() {
-          bedroom = new Bedroom(2, BedroomType.DOUBLE)
+          bedroom = new Bedroom(2, BedroomType.DOUBLE, 90.00)
           ;
       }
 
@@ -42,5 +42,16 @@ public class BedroomTest {
          assertEquals(0, bedroom.getNumberOfGuests());
 
      }
+
+    @Test
+    public void removeGuestListCount(){
+        bedroom.addGuest(guest);
+        bedroom.removeGuest(guest);
+        assertEquals(0, bedroom.getNumberOfGuests());}
+
+    @Test
+    public void hasNightlyRate(){
+          assertEquals(90.00, bedroom.getNightlyRate(), 0.01);
+    }
 
 }

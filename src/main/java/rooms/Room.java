@@ -25,6 +25,10 @@ public class Room {
         this.guest.add(guest);
     }
 
+    public void removeGuest(Guest guest){
+        this.guest.remove(guest);
+    }
+
 }
 
 
